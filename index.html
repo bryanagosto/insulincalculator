@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>All-in-one Type 1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets2/css/main.css" />
+		<link rel="stylesheet" href="assets2/css/mine.css" />
+		<noscript><link rel="stylesheet" href="assets2/css/noscript.css" /></noscript>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>	
+	</head>
+	<body class="is-preload" onload=preFilled()>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images2/blood-clipart.svg" alt="image of a drop of blood" /></span>
+						<h1>All-in-one Type 1</h1>
+						<p>An all inclusive insulin calculator</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Introduction</a></li>
+							<li><a href="#first">Set-up</a></li>
+							<li><a href="#second">Eat a Meal</a></li>
+							<li><a href="#cts">Read Me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>How it works</h2>
+										</header>
+										<p>Simply enter your current glucose level and carbs for your meal. 
+											All other information such as your insuling to carb ratio, 
+											insulin sensitivity (correction factor) and your target blood glucose 
+											will be stored for easy access on your next meal. <b>Do not 
+											continue without first reading the disclaimer provided in the "Read 
+											Me" section.</b></p>
+									</div>
+									<span class="image"><img src="images2/meter.png" alt="image of a glucose meter" /></span>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>Your Set-up</h2>
+								</header>
+								<form name = "setupform" id = "setupid" >
+									<ul class="statistics">
+										<li class="style1">
+											<h3>Insulin to Carb Ratio:</h3>
+											<input type="text" id="icr"/>
+										</li>
+										<li class="style2">
+											<h3>Insulin Sensitivity:</h3>
+											<input type="text" id="is"/>
+										</li>
+										<li class="style3">
+											<h3>Target Blood Glucose:</h3>
+											<input type="text" id="tbg"/>
+										</li>
+									</ul>
+									<footer class="major">
+										<ul class="actions special">
+											<li><a href="#open-modal" style = "border:none;box-shadow: none;"><input type="button" onClick="setup()" value="Set me up!"/></a></li>
+											<div id="open-modal" class="modal-window">
+  												<div>
+    												<a href="#modal-close" title="Close" class="modal-close">&times;</a>
+    												<h1>You are set!</h1>
+  												</div>
+											</div>
+											<li><a href="#open-modal1" style = "border:none;box-shadow: none;"><input type="button" onClick="cleanstate()" value="Reset my Values"/></a></li>
+											<div id="open-modal1" class="modal-window">
+												<div>
+													<a href="#modal-close" title="Close" class="modal-close">&times;</a>
+													<h1>You are clear!</h1>
+												</div>
+											</div>
+										</ul>
+									</form>	
+								</footer>
+							</section>
+
+						<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>Eat a Meal</h2>
+								</header>
+								<form>
+									<ul class="features">
+										<li>
+											<h3>Meal Carbs:</h3>
+											<input type="text" id="mc"/>
+										</li>
+										<li>
+											<h3>Current Blood Glucose:</h3>
+											<input type="text" id="cbg"/>
+										</li>
+									</ul>
+									<ul class="actions special">
+										<li><input type="button" onClick="insulinintake()" value="Calculate my insulin!"/></li>
+									</ul>
+									<ul class="statistics">
+										<li class="style4">
+											<span class="icon solid fa-user-md"></span>
+											<strong><div id="totalinsulin"></div></strong>Total Insulin
+										</li>
+									</ul>
+								</form>	
+							</section>
+
+						<!-- Footer -->
+							<section id = "cts" class = "main special">
+								<header class="major">
+									<h2>Read Me</h2>
+									<p><strong>This website is not meant to be used for medical care or diagnosis 
+									of any kind. Do not use the features of this site without first discussing your 
+									exact insulin requirements with the clinician who prescribes your insulin.  
+									All values entered into the fields above should be determined with the 
+									guidance of your health care team. Use at your own risk. This site is ONLY meant 
+									as a website development portfolio project.<strong></p>
+								</header>
+							</section>
+					</div>	
+			</div>	
+				
+		<!-- Scripts -->
+			<script src="assets2/js/jquery.min.js"></script>
+			<script src="assets2/js/jquery.scrollex.min.js"></script>
+			<script src="assets2/js/jquery.scrolly.min.js"></script>
+			<script src="assets2/js/browser.min.js"></script>
+			<script src="assets2/js/breakpoints.min.js"></script>
+			<script src="assets2/js/util.js"></script>
+			<script src="assets2/js/main.js"></script>
+			<script src="assets2/js/mine.js"></script>    
+	</body>
+</html>
